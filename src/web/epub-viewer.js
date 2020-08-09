@@ -799,6 +799,7 @@ const setupRendition = () => {
     if (paginated) {
         // scroll through pages
         const onwheel = debounce(event => {
+            return
             if (getWindowIsZoomed()) return
             const { deltaX, deltaY } = event
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
